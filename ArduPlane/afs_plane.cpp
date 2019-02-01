@@ -8,8 +8,8 @@
 AP_AdvancedFailsafe_Plane::AP_AdvancedFailsafe_Plane(AP_Mission &_mission, const AP_GPS &_gps) :
     AP_AdvancedFailsafe(_mission, _gps)
 {}
-// this is a test comment
-
+// this is a test comment,
+// and this as well.
 /*
   setup radio_out values for all channels to termination values
  */
