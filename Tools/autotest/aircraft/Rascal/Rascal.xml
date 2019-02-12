@@ -519,6 +519,53 @@
             </function>
         </axis>
     </aerodynamics>
+	<external_reactions>
+
+		<force name="Tether-force" frame="LOCAL">
+			<function>
+			<product>
+			<pow>
+				<sum>
+					<pow>	
+					<property>position/distance-from-start-mag-mt</property>
+					<value>2.0</value>
+					</pow>
+					<pow>	
+					<property>position/distance-from-start-alt-mt</property>
+					<value>2.0</value>
+					</pow>
+
+				</sum>
+				<value>0.5</value>
+			</pow>	
+				<property>position/tether-strength</property>  
+			</product>
+			</function>
+			<location unit="IN">
+				<x>37.4</x>
+				<y>0</y>
+				<z>0</z>
+			</location> 
+			<xdirection>				
+				<property>position/distance-from-start-lat-mt</property>
+			<!--	<value>0</value>-->
+			</xdirection>
+			<ydirection>				
+				<property>position/distance-from-start-lon-mt</property>
+			<!--	<value>1</value>-->
+			</ydirection>
+			<zdirection>				
+				<property>position/distance-from-start-alt-mt</property>
+			<!--	<value>0</value>-->
+			</zdirection>
+
+
+		</force>
+
+	</external_reactions>
+
+
+
 
     <!-- <output name="RascalOutputFile.csv" type="CSV" rate="10">
         <rates> ON </rates>
